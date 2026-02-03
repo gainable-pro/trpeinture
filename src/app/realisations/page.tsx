@@ -31,9 +31,10 @@ const projects = [
 export default function RealisationsPage() {
     return (
         <>
-            <section className="relative bg-brand-dark text-white py-20 lg:py-28">
+            <section className="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 via-secondary/60 to-secondary/30 z-0"></div>
                 <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">Mes Réalisations</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-6 font-script">Mes Réalisations</h1>
                     <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                         Quelques exemples de chantiers livrés.
                     </p>

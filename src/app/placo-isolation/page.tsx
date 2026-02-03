@@ -19,15 +19,15 @@ export default function PlacoPage() {
                         src="/images/service-placo.jpg"
                         alt="Pose de placo et isolation"
                         fill
-                        className="object-cover opacity-30"
+                        className="object-cover"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 via-secondary/60 to-secondary/30 z-10"></div>
                 </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-20">
                     <div className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 font-script">
                             Placo & Isolation
                         </h1>
                         <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
