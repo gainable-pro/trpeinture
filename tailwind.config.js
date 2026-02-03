@@ -33,9 +33,11 @@ module.exports = {
                     foreground: "#FFFFFF",
                 },
                 secondary: {
-                    DEFAULT: "#1E293B", // Slate 800 roughly
+                    DEFAULT: "#0EA5E9", // Sky 500 (Vivid Light Blue)
                     foreground: "#FFFFFF",
                 },
+                "brand-dark": "#334155", // Slate 700 (Lighter Gray/Blue)
+                "brand-light": "#F1F5F9", // Slate 100
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -47,6 +49,7 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['var(--font-inter)'],
+                script: ['var(--font-dancing)'],
             },
             keyframes: {
                 "accordion-down": {

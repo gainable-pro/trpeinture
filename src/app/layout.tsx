@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Dancing_Script } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
 
 export const metadata: Metadata = {
   title: "TR Peinture | Peintre en Bâtiment & Rénovation - Salon, Miramas, Eyguières",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className={cn(inter.className, "min-h-screen flex flex-col bg-slate-50")}>
+      <body className={cn(inter.variable, dancing.variable, "font-sans min-h-screen flex flex-col bg-slate-50")}>
         <Navbar />
         <main className="flex-grow pt-20">
           {children}

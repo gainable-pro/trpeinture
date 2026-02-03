@@ -14,7 +14,7 @@ export function Hero() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/50 z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/95 via-secondary/80 to-secondary/40 z-10"></div>
             </div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-20">
@@ -27,7 +27,7 @@ export function Hero() {
                         Disponibilité immédiate sur Eyguières & alentours
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-white font-script">
                         La peinture, c'est mon futur.
                     </h1>
 

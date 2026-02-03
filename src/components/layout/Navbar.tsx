@@ -26,7 +26,7 @@ export function Navbar() {
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <div className="relative w-[200px] h-20">
+                        <div className="relative w-[280px] h-28">
                             <Image
                                 src="/images/logo.png"
                                 alt="TR Peinture Logo"

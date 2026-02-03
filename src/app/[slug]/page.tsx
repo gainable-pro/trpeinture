@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getCityData, getAllCitySlugs, cities } from "@/lib/cities"; // Direct import for params
 import { LeadForm } from "@/components/shared/LeadForm";
+import { ZigZagSection } from "@/components/layout/ZigZagSection";
 import { Process } from "@/components/home/Process";
 import { Check, MapPin, Star, ArrowRight } from "lucide-react";
 
@@ -34,7 +35,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
     return (
         <>
             {/* City Hero */}
-            <section className="relative bg-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+            <section className="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     {/* Reusing the Main Hero Image but maybe we can vary it later */}
                     <Image
@@ -44,7 +45,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                         className="object-cover opacity-30"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent z-10"></div>
                 </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-20">
@@ -72,62 +73,28 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 </div>
             </section>
 
-            {/* Local Services Presentation */}
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                        <div>
-                            <h2 className="text-3xl font-bold text-slate-900 mb-6">
-                                Vos travaux de peinture à {city.name}
-                            </h2>
-                            <p className="text-lg text-slate-600 mb-6">
-                                Habitant ou travaillant sur le secteur de {city.name}, je connais bien les contraintes locales et les types de logements (villas, appartements centre-ville, mas...).
-                            </p>
-                            <p className="text-slate-600 mb-8">
-                                Je vous propose une prestation complète sans intermédiaire :
-                            </p>
 
-                            <div className="space-y-4">
-                                <div className="flex gap-4 items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <div className="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                                        <span className="font-bold">1</span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Peinture Intérieure</h4>
-                                        <p className="text-sm text-slate-600">Murs, plafonds, finitions soignées pour vos pièces de vie.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4 items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center shrink-0">
-                                        <span className="font-bold">2</span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Placo & Isolation</h4>
-                                        <p className="text-sm text-slate-600">Redistribution des pièces et confort thermique.</p>
-                                    </div>
-                                </div>
-                                <div className="flex gap-4 items-center p-4 bg-slate-50 rounded-xl border border-slate-100">
-                                    <div className="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0">
-                                        <span className="font-bold">3</span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-bold text-slate-900">Sols & Parquets</h4>
-                                        <p className="text-sm text-slate-600">Pose de parquet flottant ou sol souple.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-2">Devis Gratuit à {city.name}</h3>
-                            <p className="text-slate-600 mb-6">
-                                Je me déplace gratuitement rue {city.name} pour évaluer votre chantier.
-                            </p>
-                            <LeadForm />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Local Services Presentation (ZigZag) */}
+            <ZigZagSection items={[
+                {
+                    title: `Peinture Intérieure à ${city.name}`,
+                    description: "Je redonne vie à vos murs et plafonds avec des peintures de qualité professionnelle (Seigneurie, Zolpan). Que ce soit pour rafraîchir une chambre ou repeindre tout un appartement, je garantis un chantier propre et des finitions soignées.",
+                    imageSrc: "/images/services/peinture-interieure.jpg", // Placeholder
+                    features: ["Protection des sols et meubles", "Préparation minutieuse des supports", "Peinture mate, velours ou satinée"]
+                },
+                {
+                    title: "Placo & Isolation",
+                    description: "Optimisez votre espace et votre confort thermique. Je réalise la pose de cloisons sèches, faux-plafonds et doublages isolants pour réduire vos factures d'énergie.",
+                    imageSrc: "/images/services/placo.jpg", // Placeholder
+                    features: ["Cloisons de distribution", "Faux-plafonds suspendus", "Isolation thermique et phonique"]
+                },
+                {
+                    title: "Sols & Parquets",
+                    description: "Une pose de sol impeccable pour sublimer vos pièces. Je vous conseille sur le choix des matériaux adaptés à chaque usage (passage fréquent, pièces humides).",
+                    imageSrc: "/images/services/sol.jpg", // Placeholder
+                    features: ["Pose de parquet flottant", "Sols souples (LVT / PVC)", "Plinthes et finitions"]
+                }
+            ]} />
 
             <Process />
 

@@ -4,13 +4,13 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
     return (
-        <footer className="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <footer className="bg-brand-dark text-slate-300 py-12 border-t border-slate-700">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
 
                     {/* Column 1: Brand & Contact */}
                     <div>
-                        <div className="relative w-48 h-16 mb-6">
+                        <div className="relative w-72 h-24 mb-6">
                             <Image
                                 src="/images/logo.png"
                                 alt="TR Peinture"
