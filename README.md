@@ -1,4 +1,4 @@
-# TR Peinture
+# TR Peinture (Deployment Retrigger)
 
 Site vitrine haute performance pour une entreprise de peinture en bâtiment et rénovation.
 Développé avec Next.js 14, Tailwind CSS et optimisé pour le SEO Local.

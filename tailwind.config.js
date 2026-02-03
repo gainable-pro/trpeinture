@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,8 +16,8 @@ const config: Config = {
         },
         extend: {
             colors: {
-                background: "var(--background)",
-                foreground: "var(--foreground)",
+                background: "hsl(var(--background))",
+                foreground: "hsl(var(--foreground))",
                 primary: {
                     DEFAULT: "#C5A059", // Gold/Bronze
                     50: "#F9F6F0",
@@ -31,11 +30,15 @@ const config: Config = {
                     700: "#866632",
                     800: "#694F28",
                     900: "#4D391E",
+                    foreground: "#FFFFFF",
                 },
                 secondary: {
                     DEFAULT: "#1E293B", // Slate 800 roughly
+                    foreground: "#FFFFFF",
                 },
                 border: "hsl(var(--border))",
+                input: "hsl(var(--input))",
+                ring: "hsl(var(--ring))",
             },
             borderRadius: {
                 lg: "var(--radius)",
@@ -63,4 +66,3 @@ const config: Config = {
     },
     plugins: [],
 };
-export default config;
