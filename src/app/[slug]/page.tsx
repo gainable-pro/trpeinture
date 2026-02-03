@@ -1,4 +1,3 @@
-```
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,7 +39,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                     {/* Reusing the Main Hero Image but maybe we can vary it later */}
                     <Image
                         src="/images/hero-main.png"
-                        alt={`Peintre à ${ city.name } `}
+                        alt={`Peintre à ${city.name} `}
                         fill
                         className="object-cover opacity-30"
                         priority
@@ -155,7 +154,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                         {city.nearCities.map((nearCity) => (
                             <Link
                                 key={nearCity}
-                                href={`/ peintre - ${ nearCity.toLowerCase().replace(/ /g, '-') } `}
+                                href={`/ peintre - ${nearCity.toLowerCase().replace(/ /g, '-')} `}
                                 className="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-sm font-medium flex items-center gap-2"
                             >
                                 <ArrowRight size={14} className="text-secondary" />
