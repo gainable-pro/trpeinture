@@ -10,7 +10,7 @@ export function Footer() {
 
                     {/* Column 1: Brand & Contact */}
                     <div>
-                        <div className="relative w-32 h-12 mb-6">
+                        <div className="relative w-48 h-16 mb-6">
                             <Image
                                 src="/images/logo.png"
                                 alt="TR Peinture"
