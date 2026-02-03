@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export function Footer() {
@@ -9,7 +10,14 @@ export function Footer() {
 
                     {/* Column 1: Brand & Contact */}
                     <div>
-                        <h3 className="text-xl font-bold text-white mb-6">TR Peinture</h3>
+                        <div className="relative w-32 h-12 mb-6">
+                            <Image
+                                src="/images/logo.png"
+                                alt="TR Peinture"
+                                fill
+                                className="object-contain"
+                            />
+                        </div>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <MapPin className="text-primary w-5 h-5 mt-1" />

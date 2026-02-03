@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Phone, Paintbrush } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -25,12 +26,15 @@ export function Navbar() {
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <span className="bg-primary text-white p-2 rounded-lg">
-                            <Paintbrush size={24} />
-                        </span>
-                        <span className="text-xl font-bold tracking-tight text-slate-900">
-                            TR <span className="text-primary">Peinture</span>
-                        </span>
+                        <div className="relative w-40 h-16">
+                            <Image
+                                src="/images/logo.png"
+                                alt="TR Peinture Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -68,7 +72,7 @@ export function Navbar() {
                 <div className="xl:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-100 shadow-xl p-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
                     {navigation.map((item) => (
                         <Link
-                            key={item.path}
+                            key={item.name}
                             href={item.href}
                             className="text-lg font-medium text-slate-700 py-2 border-b border-slate-50 last:border-0"
                             onClick={() => setIsOpen(false)}
