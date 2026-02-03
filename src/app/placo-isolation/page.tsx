@@ -12,16 +12,17 @@ export const metadata = {
 export default function PlacoPage() {
     return (
         <>
-            <section className="relative bg-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+            {/* Hero Section */}
+            <section className="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/service-placo.png"
-                        alt="Artisan plaquiste posant une cloison"
+                        src="/images/service-placo.jpg"
+                        alt="Pose de placo et isolation"
                         fill
-                        className="object-cover opacity-40"
+                        className="object-cover opacity-30"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent z-10"></div>
                 </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-20">

@@ -13,16 +13,16 @@ export default function PeinturePage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative bg-slate-900 text-white py-20 lg:py-28 overflow-hidden">
+            <section className="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/service-peinture.png"
                         alt="Peintre en bâtiment application peinture murale"
                         fill
-                        className="object-cover opacity-40"
+                        className="object-cover opacity-30"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent z-10"></div>
                 </div>
 
                 <div className="container mx-auto px-4 md:px-6 relative z-20">
