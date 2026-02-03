@@ -2,15 +2,24 @@
 
 import { useState } from "react";
 import { Send, Loader2, CheckCircle } from "lucide-react";
+import { sendLeadEmail } from "@/app/actions";
 
 export function LeadForm() {
-    const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setStatus('loading');
-        // Placeholder for real submission logic
-        setTimeout(() => setStatus('success'), 1500);
+
+        const formData = new FormData(e.currentTarget);
+        const result = await sendLeadEmail(formData);
+
+        if (result.success) {
+            setStatus('success');
+        } else {
+            console.error(result.error);
+            setStatus('error');
+        }
     }
 
     if (status === 'success') {
@@ -39,7 +48,7 @@ export function LeadForm() {
                 <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-slate-700">Nom complet</label>
                     <input
-                        type="text" id="name" required
+                        name="name" type="text" id="name" required
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="M. Dupont"
                     />
@@ -47,7 +56,7 @@ export function LeadForm() {
                 <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-medium text-slate-700">Téléphone</label>
                     <input
-                        type="tel" id="phone" required
+                        name="phone" type="tel" id="phone" required
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="06 12 34 56 78"
                     />
@@ -57,7 +66,7 @@ export function LeadForm() {
             <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium text-slate-700">Email</label>
                 <input
-                    type="email" id="email" required
+                    name="email" type="email" id="email" required
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                     placeholder="votre@email.com"
                 />
@@ -67,7 +76,7 @@ export function LeadForm() {
                 <div className="space-y-2">
                     <label htmlFor="city" className="text-sm font-medium text-slate-700">Ville du chantier</label>
                     <input
-                        type="text" id="city" required
+                        name="city" type="text" id="city" required
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
                         placeholder="Ex: Eyguières"
                     />
@@ -75,7 +84,7 @@ export function LeadForm() {
                 <div className="space-y-2">
                     <label htmlFor="type" className="text-sm font-medium text-slate-700">Type de travaux</label>
                     <select
-                        id="type"
+                        name="type" id="type"
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all bg-white"
                     >
                         <option>Peinture intérieure</option>
@@ -90,11 +99,17 @@ export function LeadForm() {
             <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium text-slate-700">Description du projet</label>
                 <textarea
-                    id="message" rows={4}
+                    name="message" id="message" rows={4}
                     className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
                     placeholder="Surface approximative, état des murs, délai souhaité..."
                 ></textarea>
             </div>
+
+            {status === 'error' && (
+                <div className="text-red-600 text-sm bg-red-50 p-3 rounded-lg border border-red-200">
+                    Une erreur est survenue lors de l'envoi. Veuillez réessayer ou appeler directement.
+                </div>
+            )}
 
             <button
                 type="submit"
