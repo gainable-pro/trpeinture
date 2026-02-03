@@ -23,7 +23,7 @@ export function Navbar() {
     return (
         <header className="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-slate-100">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex h-20 items-center justify-between">
+                <div className="flex h-28 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
                         <div className="relative w-[280px] h-28">
@@ -31,7 +31,7 @@ export function Navbar() {
                                 src="/images/logo.png"
                                 alt="TR Peinture Logo"
                                 fill
-                                className="object-contain"
+                                className="object-contain mix-blend-multiply"
                                 priority
                             />
                         </div>

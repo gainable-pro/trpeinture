@@ -15,7 +15,7 @@ export function Footer() {
                                 src="/images/logo.png"
                                 alt="TR Peinture"
                                 fill
-                                className="object-contain"
+                                className="object-contain mix-blend-screen"
                             />
                         </div>
                         <ul className="space-y-4">
