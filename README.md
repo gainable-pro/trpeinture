@@ -3,6 +3,9 @@
 Site vitrine haute performance pour une entreprise de peinture en bâtiment et rénovation.
 Développé avec Next.js 14, Tailwind CSS et optimisé pour le SEO Local.
 
+
+[![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=trpeinture)](https://vercel.com/gainable-pro/trpeinture)
+
 ## 🚀 Fonctionnalités
 
 *   **Design Premium** : Charte graphique soignée (Bleu Nuit / Doré).
