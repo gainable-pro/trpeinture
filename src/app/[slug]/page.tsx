@@ -15,7 +15,8 @@ export async function generateStaticParams() {
 }
 
 // Dynamic Metadata
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const city = getCityData(params.slug);
     if (!city) return {};
 
@@ -25,7 +26,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
-export default function CityPage({ params }: { params: { slug: string } }) {
+export default async function CityPage(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const city = getCityData(params.slug);
 
     if (!city) {
