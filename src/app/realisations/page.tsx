@@ -14,17 +14,17 @@ const projects = [
     {
         title: "Pose Parquet Miramas",
         category: "Sols",
-        image: "/images/service-sol.jpg",
+        image: "/images/service-revetements.png",
     },
     {
         title: "Création Cloisons Eyguières",
         category: "Placo",
-        image: "/images/service-placo.jpg",
+        image: "/images/service-placo.png",
     },
     {
         title: "Ravalement Façade",
         category: "Extérieur",
-        image: "/images/service-renovation.jpg",
+        image: "/images/service-renovation.png",
     },
 ];
 
