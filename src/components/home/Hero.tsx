@@ -1,19 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+
+const heroImages = [
+    "/images/hero-main.png",
+    "/images/hero-planning.jpg"
+];
 
 export function Hero() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="relative bg-slate-900 text-white py-20 lg:py-32 overflow-hidden">
             {/* Background with overlay */}
             <div className="absolute inset-0 z-0">
-                <Image
-                    src="/images/hero-main.png"
-                    alt="Peintre professionnel TR Peinture"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                {heroImages.map((src, index) => (
+                    <div
+                        key={src}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                            }`}
+                    >
+                        <Image
+                            src={src}
+                            alt="Peintre professionnel TR Peinture"
+                            fill
+                            className="object-cover"
+                            priority={index === 0}
+                        />
+                    </div>
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/85 via-secondary/60 to-secondary/30 z-10"></div>
             </div>
 
