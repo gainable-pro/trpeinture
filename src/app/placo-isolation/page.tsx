@@ -102,7 +102,7 @@ export default function PlacoPage() {
                         </div>
 
                         <div className="relative">
-                            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 sticky top-24">
+                            <div className="bg-slate-100 rounded-2xl p-8 border border-slate-200 sticky top-24">
                                 <h3 className="text-2xl font-bold mb-6 text-slate-900">Devis Placo / Isolation</h3>
                                 <p className="text-slate-600 mb-8">
                                     Vous avez un projet d'aménagement ? Je me déplace pour vérifier la faisabilité technique.

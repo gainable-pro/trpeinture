@@ -66,7 +66,7 @@ export default function ContactPage() {
                         </div>
 
                         {/* Form */}
-                        <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                        <div className="bg-slate-100 p-8 rounded-2xl border border-slate-200">
                             <h2 className="text-2xl font-bold text-slate-900 mb-6">Envoyer un message</h2>
                             <LeadForm />
                         </div>
