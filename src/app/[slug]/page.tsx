@@ -79,19 +79,19 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                 {
                     title: `Peinture Intérieure à ${city.name}`,
                     description: "Je redonne vie à vos murs et plafonds avec des peintures de qualité professionnelle (Seigneurie, Zolpan). Que ce soit pour rafraîchir une chambre ou repeindre tout un appartement, je garantis un chantier propre et des finitions soignées.",
-                    imageSrc: "/images/services/peinture-interieure.jpg", // Placeholder
+                    imageSrc: "/images/service-peinture.png",
                     features: ["Protection des sols et meubles", "Préparation minutieuse des supports", "Peinture mate, velours ou satinée"]
                 },
                 {
                     title: "Placo & Isolation",
                     description: "Optimisez votre espace et votre confort thermique. Je réalise la pose de cloisons sèches, faux-plafonds et doublages isolants pour réduire vos factures d'énergie.",
-                    imageSrc: "/images/services/placo.jpg", // Placeholder
+                    imageSrc: "/images/service-placo.png",
                     features: ["Cloisons de distribution", "Faux-plafonds suspendus", "Isolation thermique et phonique"]
                 },
                 {
                     title: "Sols & Parquets",
                     description: "Une pose de sol impeccable pour sublimer vos pièces. Je vous conseille sur le choix des matériaux adaptés à chaque usage (passage fréquent, pièces humides).",
-                    imageSrc: "/images/services/sol.jpg", // Placeholder
+                    imageSrc: "/images/service-revetements.png",
                     features: ["Pose de parquet flottant", "Sols souples (LVT / PVC)", "Plinthes et finitions"]
                 }
             ]} />
@@ -105,8 +105,8 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                     <div className="space-y-6">
                         {city.faq.map((item, idx) => (
                             <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <h4 className="font-bold text-slate-900 mb-2">{item.q}</h4>
-                                <p className="text-slate-600 text-sm">{item.a}</p>
+                                <h4 className="font-bold text-slate-900 mb-2">{item.q.replace(/{city}/g, city.name)}</h4>
+                                <p className="text-slate-600 text-sm">{item.a.replace(/{city}/g, city.name)}</p>
                             </div>
                         ))}
                     </div>
@@ -121,7 +121,7 @@ export default function CityPage({ params }: { params: { slug: string } }) {
                         {city.nearCities.map((nearCity) => (
                             <Link
                                 key={nearCity}
-                                href={`/ peintre - ${nearCity.toLowerCase().replace(/ /g, '-')} `}
+                                href={`/peintre-${nearCity.toLowerCase().replace(/ /g, '-').replace(/é/g, 'e').replace(/è/g, 'e').replace(/à/g, 'a').replace(/ç/g, 'c')}`}
                                 className="px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors text-sm font-medium flex items-center gap-2"
                             >
                                 <ArrowRight size={14} className="text-secondary" />
