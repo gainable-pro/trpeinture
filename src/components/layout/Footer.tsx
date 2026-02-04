@@ -12,10 +12,10 @@ export function Footer() {
                     <div>
                         <div className="relative w-72 h-24 mb-6">
                             <Image
-                                src="/images/logo.png"
+                                src="/images/logo-footer.png"
                                 alt="TR Peinture"
                                 fill
-                                className="object-contain mix-blend-screen"
+                                className="object-contain"
                             />
                         </div>
                         <ul className="space-y-4">

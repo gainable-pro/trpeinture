@@ -14,7 +14,6 @@ const navigation = [
     { name: "Rénovation", href: "/renovation" },
     { name: "Réalisations", href: "/realisations" },
     { name: "Zone", href: "/zone-intervention" },
-    { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -48,13 +47,25 @@ export function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
-                        <a
-                            href="tel:0635238107" // Updated phone
-                            className="ml-4 flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg"
-                        >
-                            <Phone size={18} />
-                            <span>Devis gratuit</span>
-                        </a>
+
+                        <div className="flex items-center gap-4 ml-4">
+                            <a
+                                href="tel:0635238107"
+                                className="flex items-center gap-2 text-slate-700 font-bold hover:text-primary transition-colors"
+                            >
+                                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                    <Phone size={18} />
+                                </div>
+                                06 35 23 81 07
+                            </a>
+                            <Link
+                                href="/contact"
+                                className="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg flex items-center gap-2"
+                            >
+                                <Paintbrush size={18} />
+                                Devis gratuit
+                            </Link>
+                        </div>
                     </nav>
 
                     {/* Mobile Menu Button */}
