@@ -6,8 +6,56 @@ import { FAQ } from "@/components/home/FAQ";
 import { LeadForm } from "@/components/shared/LeadForm";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TR Peinture",
+    "image": "https://trpeinture.fr/images/logo.png",
+    "telephone": "0635238107",
+    "email": "contact@trpeinture.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Eyguières",
+      "postalCode": "13430",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.6939,
+      "longitude": 5.0303
+    },
+    "url": "https://trpeinture.fr",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "areaServed": [
+      "Eyguières",
+      "Salon-de-Provence",
+      "Miramas",
+      "Istres",
+      "Saint-Chamas"
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <Services />
 

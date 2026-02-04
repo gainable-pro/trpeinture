@@ -23,6 +23,15 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
     return {
         title: city.title,
         description: city.metaDesc,
+        openGraph: {
+            title: city.title,
+            description: city.metaDesc,
+            url: `https://trpeinture.fr/peintre-${city.slug.replace('peintre-', '')}`,
+            type: 'website',
+        },
+        alternates: {
+            canonical: `/peintre-${city.slug.replace('peintre-', '')}`,
+        }
     };
 }
 
@@ -34,8 +43,31 @@ export default async function CityPage(props: { params: Promise<{ slug: string }
         notFound();
     }
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Peintre en bâtiment",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "TR Peinture",
+            "telephone": "0635238107",
+            "priceRange": "$$"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": city.name,
+            "postalCode": city.zip
+        },
+        "description": city.intro,
+        "name": `Peintre à ${city.name}`
+    };
+
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* City Hero */}
             <section className="relative bg-brand-dark text-white py-20 lg:py-28 overflow-hidden">
                 <div className="absolute inset-0 z-0">

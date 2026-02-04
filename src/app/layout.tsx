@@ -9,8 +9,23 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
 
 export const metadata: Metadata = {
-  title: "TR Peinture | Peintre en Bâtiment & Rénovation - Salon, Miramas, Eyguières",
+  metadataBase: new URL('https://trpeinture.fr'),
+  title: {
+    default: "TR Peinture | Peintre en Bâtiment & Rénovation - Salon, Miramas, Eyguières",
+    template: "%s | TR Peinture"
+  },
   description: "Entreprise de peinture et rénovation intérieure/extérieure. Pose de placo, isolation, revêtements de sol. Devis gratuit et intervention rapide autour d'Eyguières.",
+  openGraph: {
+    title: "TR Peinture | Peintre en Bâtiment & Rénovation",
+    description: "Expert en peinture, placo et sols. Devis gratuit sous 24h.",
+    url: 'https://trpeinture.fr',
+    siteName: 'TR Peinture',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
