@@ -58,7 +58,7 @@ export function LeadForm() {
                     <input
                         name="phone" type="tel" id="phone" required
                         className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                        placeholder="06 12 34 56 78"
+                        placeholder="06 35 23 81 07"
                     />
                 </div>
             </div>

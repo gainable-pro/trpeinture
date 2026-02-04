@@ -49,7 +49,7 @@ export function Navbar() {
                             </Link>
                         ))}
                         <a
-                            href="tel:0600000000" // Placeholder phone
+                            href="tel:0635238107" // Updated phone
                             className="ml-4 flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-primary/90 transition-all shadow-md hover:shadow-lg"
                         >
                             <Phone size={18} />
@@ -81,7 +81,7 @@ export function Navbar() {
                         </Link>
                     ))}
                     <a
-                        href="tel:0600000000"
+                        href="tel:0635238107"
                         className="flex items-center justify-center gap-2 bg-primary text-white p-4 rounded-lg font-bold mt-2"
                     >
                         <Phone size={20} /> Appeler maintenant

@@ -35,20 +35,11 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-bold text-slate-900 mb-1">Téléphone</h3>
                                         <p className="text-slate-600 mb-2">Du Lundi au Vendredi, 8h - 18h</p>
-                                        <a href="tel:0600000000" className="text-xl font-bold text-primary hover:underline">06 00 00 00 00</a>
+                                        <a href="tel:0635238107" className="text-xl font-bold text-primary hover:underline">06 35 23 81 07</a>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-4 items-start">
-                                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-                                        <Mail size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-slate-900 mb-1">Email</h3>
-                                        <p className="text-slate-600 mb-2">Pour vos demandes de devis écrites</p>
-                                        <a href="mailto:contact@trpeinture.fr" className="text-lg font-medium text-slate-900 hover:text-primary transition-colors">contact@trpeinture.fr</a>
-                                    </div>
-                                </div>
+                                {/* Email Removed */}
 
                                 <div className="flex gap-4 items-start">
                                     <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">

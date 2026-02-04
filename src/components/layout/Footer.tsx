@@ -25,12 +25,9 @@ export function Footer() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="text-primary w-5 h-5" />
-                                <a href="tel:0600000000" className="hover:text-white transition-colors">06 00 00 00 00</a>
+                                <a href="tel:0635238107" className="hover:text-white transition-colors">06 35 23 81 07</a>
                             </li>
-                            <li className="flex items-center gap-3">
-                                <Mail className="text-primary w-5 h-5" />
-                                <a href="mailto:contact@trpeinture.fr" className="hover:text-white transition-colors">contact@trpeinture.fr</a>
-                            </li>
+                            {/* Email removed as requested */}
                             <li className="flex items-start gap-3">
                                 <Clock className="text-primary w-5 h-5 mt-1" />
                                 <span>Lun - Ven : 8h - 18h<br />Samedi : Sur RDV</span>

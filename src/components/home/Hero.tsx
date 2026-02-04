@@ -40,10 +40,10 @@ export function Hero() {
                         <a
                             href="tel:0600000000"
                             className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg shadow-primary/25"
-                        >
-                            <Phone size={20} />
-                            Demander un devis gratuit
-                        </a>
+                        <Link href="tel:0635238107" className="bg-primary text-white border-2 border-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-primary/90 transition-all flex items-center gap-2 group">
+                            <Phone size={20} className="group-hover:rotate-12 transition-transform" />
+                            06 35 23 81 07
+                        </Link>
                         <Link
                             href="/realisations"
                             className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border border-white/10 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
