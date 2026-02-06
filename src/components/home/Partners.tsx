@@ -3,9 +3,12 @@ import Image from 'next/image';
 const partners = [
     { name: 'Tollens', logo: '/images/partners/tollens.png' },
     { name: 'Unikalo', logo: '/images/partners/unikalo.png' },
+    { name: 'Seigneurie', logo: '/images/partners/seigneurie.png' },
+    { name: 'Comptoir de l\'Ours', logo: '/images/partners/comptoir-ours.png' },
     { name: 'Bastien Arfi Immobilier', logo: '/images/partners/bastien-arfi.png' },
     { name: 'ALMA', logo: '/images/partners/alma.png' },
     { name: 'FAVD', logo: '/images/partners/favd.png' },
+    { name: 'Air G Energie', logo: '/images/partners/air-g-energie.png' },
 ];
 
 export function Partners() {

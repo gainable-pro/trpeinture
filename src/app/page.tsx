@@ -44,47 +44,56 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Hero />
-      <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl relative overflow-hidden group">
-        <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-medium">Rénovation SDB - Miramas</div>
-      </div>
-      <div className="aspect-video bg-gradient-to-br from-slate-200 to-slate-300 rounded-xl relative overflow-hidden group">
-        <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-medium">Façade Villa - Istres</div>
-      </div>
-    </div >
-        </div >
-      </section >
 
-      <Process />
-      <Cities />
-      <FAQ />
+      <section id="services">
+        <Services />
+      </section>
 
-  {/* Final CTA / Lead Form Section */ }
-  <section id="contact" className="py-20 bg-white">
-    <div className="container mx-auto px-4 md:px-6">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Parlons de votre projet
-          </h2>
-          <p className="text-lg text-slate-600 mb-8">
-            Remplissez ce formulaire en 1 minute. Je reviens vers vous sous 24h pour organiser une visite gratuite.
-          </p>
-          <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-            <h4 className="font-bold text-slate-900 mb-2">Pourquoi me choisir ?</h4>
-            <ul className="space-y-2 text-slate-600 text-sm">
-              <li className="flex items-center gap-2">✅ Devis détaillé et transparent</li>
-              <li className="flex items-center gap-2">✅ Respect des délais et du budget</li>
-              <li className="flex items-center gap-2">✅ Chantier protégé et nettoyé</li>
-            </ul>
+      <section id="realisations" className="bg-slate-50">
+        <Realisations />
+      </section>
+
+      <Partners />
+
+      <section id="process">
+        <Process />
+      </section>
+
+      <section id="zones">
+        <Cities />
+      </section>
+
+      <section id="faq" className="bg-slate-50">
+        <FAQ />
+      </section>
+
+      {/* Final CTA / Lead Form Section */}
+      <section id="contact" className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                Parlons de votre projet
+              </h2>
+              <p className="text-lg text-slate-600 mb-8">
+                Remplissez ce formulaire en 1 minute. Je reviens vers vous sous 24h pour organiser une visite gratuite.
+              </p>
+              <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                <h4 className="font-bold text-slate-900 mb-2">Pourquoi me choisir ?</h4>
+                <ul className="space-y-2 text-slate-600 text-sm">
+                  <li className="flex items-center gap-2">✅ Devis détaillé et transparent</li>
+                  <li className="flex items-center gap-2">✅ Respect des délais et du budget</li>
+                  <li className="flex items-center gap-2">✅ Chantier protégé et nettoyé</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+              <LeadForm />
+            </div>
           </div>
         </div>
-
-        <div className="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
-          <LeadForm />
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
     </>
   );
 }
