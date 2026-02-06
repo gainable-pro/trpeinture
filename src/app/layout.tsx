@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://trpeinture.fr'),
+  metadataBase: new URL('https://www.tr-peinture.com'),
   title: {
     default: "TR Peinture | Peintre en Bâtiment & Rénovation - Salon, Miramas, Eyguières",
     template: "%s | TR Peinture"
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TR Peinture | Peintre en Bâtiment & Rénovation",
     description: "Expert en peinture, placo et sols. Devis gratuit sous 24h.",
-    url: 'https://trpeinture.fr',
+    url: 'https://www.tr-peinture.com',
     siteName: 'TR Peinture',
     locale: 'fr_FR',
     type: 'website',

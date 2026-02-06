@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { cities } from '@/lib/cities';
 
-const BASE_URL = 'https://trpeinture.fr'; // Replace with actual domain if different
+const BASE_URL = 'https://www.tr-peinture.com'; // Replace with actual domain if different
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const staticRoutes = [

@@ -21,7 +21,7 @@ export function Partners() {
             <div className="relative flex overflow-x-hidden group">
                 <div className="animate-marquee whitespace-nowrap flex items-center gap-16 px-8">
                     {partners.map((partner) => (
-                        <div key={partner.name} className="relative w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                        <div key={partner.name} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
@@ -34,7 +34,7 @@ export function Partners() {
 
                 <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center gap-16 px-8">
                     {partners.map((partner) => (
-                        <div key={`${partner.name}-duplicate`} className="relative w-40 h-24 flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                        <div key={`${partner.name}-duplicate`} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}

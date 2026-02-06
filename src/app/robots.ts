@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://trpeinture.fr/sitemap.xml', // Replace with actual domain
+        sitemap: 'https://www.tr-peinture.com/sitemap.xml', // Replace with actual domain
     };
 }
