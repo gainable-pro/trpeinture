@@ -37,7 +37,6 @@ export async function sendLeadEmail(formData: FormData) {
         const { data, error } = await resend.emails.send({
             from: "TR Peinture <contact@tr-peinture.com>",
             to: ["t.rpeinture.ent@gmail.com"],
-            reply_to: rawData.email as string,
             subject: `Nouveau Lead: ${rawData.name} (${rawData.city})`,
             html: htmlBody,
         });
