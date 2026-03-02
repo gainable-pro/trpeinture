@@ -105,6 +105,19 @@ export function LeadForm() {
                 ></textarea>
             </div>
 
+            <div className="flex items-start gap-3 py-2">
+                <input
+                    type="checkbox"
+                    id="rgpd"
+                    required
+                    className="mt-1 w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary cursor-pointer"
+                />
+                <label htmlFor="rgpd" className="text-xs text-slate-600 leading-tight cursor-pointer">
+                    En soumettant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
+                    Consulter ma <a href="/politique-confidentialite" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">politique de confidentialité</a>.
+                </label>
+            </div>
+
             {status === 'error' && (
                 <div className="text-red-600 text-sm bg-red-50 p-3 rounded-lg border border-red-200">
                     Une erreur est survenue lors de l'envoi. Veuillez réessayer ou appeler directement.
