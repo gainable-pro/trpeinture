@@ -114,7 +114,7 @@ export function LeadForm() {
                 />
                 <label htmlFor="rgpd" className="text-xs text-slate-600 leading-tight cursor-pointer">
                     En soumettant ce formulaire, j'accepte que mes données soient utilisées pour me recontacter dans le cadre de ma demande.
-                    Consulter ma <a href="/politique-confidentialite" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">politique de confidentialité</a>.
+                    Consulter ma <a href="/confidentialite" className="text-primary underline hover:text-primary/80 transition-colors" target="_blank">politique de confidentialité</a>.
                 </label>
             </div>
 
