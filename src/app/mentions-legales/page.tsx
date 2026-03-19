@@ -35,9 +35,24 @@ export default function MentionsLegalesPage() {
                         <p>Le responsable de la publication est le dirigeant de l’entreprise TR Peinture.</p>
                     </div>
 
+                    {/* Créateur */}
+                    <div>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">3. Création, Conception et Développement</h2>
+                        <p className="mb-4">Ce site a été conçu et réalisé par l&apos;agence EXCEED DIGITAL.</p>
+                        <ul className="list-none space-y-2">
+                            <li><strong>Raison Sociale :</strong> EXCEED DIGITAL (SAS)</li>
+                            <li><strong>SIREN :</strong> 101 447 944</li>
+                            <li><strong>Siège Social :</strong> Rue du pourra, 13140 Miramas</li>
+                            <li><strong>TVA Intracommunautaire :</strong> FR39 101447944</li>
+                            <li><strong>RCS :</strong> Salon-de-Provence</li>
+                            <li><strong>Code NAF / APE :</strong> 6201Z (Programmation informatique)</li>
+                            <li><strong>Site Web :</strong> <a href="https://www.exceeddigital.fr/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.exceeddigital.fr</a></li>
+                        </ul>
+                    </div>
+
                     {/* Hébergement */}
                     <div>
-                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">3. Hébergement du site</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">4. Hébergement du site</h2>
                         <p>Le site est hébergé par :</p>
                         <p className="font-semibold text-slate-900 mt-2">IONOS SE</p>
                         <p>Elgendorfer Str. 57<br />56410 Montabaur<br />Allemagne</p>
@@ -45,7 +60,7 @@ export default function MentionsLegalesPage() {
 
                     {/* Propriété intellectuelle */}
                     <div>
-                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">4. Propriété intellectuelle</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">5. Propriété intellectuelle</h2>
                         <p className="mb-4">
                             L’ensemble du contenu présent sur le site (textes, images, logos, graphismes, vidéos, icônes) est la propriété exclusive de <strong>TR Peinture</strong>, sauf mentions contraires.
                         </p>
@@ -56,7 +71,7 @@ export default function MentionsLegalesPage() {
 
                     {/* Données personnelles */}
                     <div>
-                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">5. Données personnelles</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">6. Données personnelles</h2>
                         <p className="mb-4">
                             Les informations éventuellement recueillies via les formulaires de contact sont destinées exclusivement à <strong>TR Peinture</strong> et ne sont en aucun cas transmises à des tiers à des fins commerciales.
                         </p>
@@ -67,7 +82,7 @@ export default function MentionsLegalesPage() {
 
                     {/* Cookies */}
                     <div>
-                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">6. Cookies</h2>
+                        <h2 className="text-2xl font-bold text-slate-900 mb-4 border-b border-slate-200 pb-2">7. Cookies</h2>
                         <p className="mb-4">
                             Le site peut être amené à utiliser des cookies à des fins de mesure d’audience (statistiques anonymes) ou d’amélioration de l’expérience utilisateur.
                         </p>

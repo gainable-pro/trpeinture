@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 const partners = [
+    { name: 'Exceed Digital', logo: '/images/partners/exceed-digital.png', url: 'https://www.exceeddigital.fr/' },
     { name: 'Tollens', logo: '/images/partners/tollens.png' },
     { name: 'Unikalo', logo: '/images/partners/unikalo.png' },
     { name: 'Seigneurie', logo: '/images/partners/seigneurie.png' },
@@ -19,30 +20,51 @@ export function Partners() {
             </div>
 
             <div className="relative flex overflow-x-hidden group">
-                <div className="animate-marquee whitespace-nowrap flex items-center gap-16 px-8">
-                    {partners.map((partner) => (
-                        <div key={partner.name} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
+                    {partners.map((partner) => {
+                        const content = (
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
                                 fill
                                 className="object-contain"
                             />
-                        </div>
-                    ))}
+                        );
+                        return (
+                            <div key={partner.name} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
+                                {partner.url ? (
+                                    <a href={partner.url} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative cursor-pointer" title={partner.name}>
+                                        {content}
+                                    </a>
+                                ) : (
+                                    content
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
 
                 <div className="absolute top-0 animate-marquee2 whitespace-nowrap flex items-center gap-16 px-8">
-                    {partners.map((partner) => (
-                        <div key={`${partner.name}-duplicate`} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
+                    {partners.map((partner) => {
+                        const content = (
                             <Image
                                 src={partner.logo}
                                 alt={partner.name}
                                 fill
                                 className="object-contain"
                             />
-                        </div>
-                    ))}
+                        );
+                        return (
+                            <div key={`${partner.name}-duplicate`} className="relative w-40 h-24 flex-shrink-0 transition-all duration-300 hover:opacity-100">
+                                {partner.url ? (
+                                    <a href={partner.url} target="_blank" rel="noopener noreferrer" className="block w-full h-full relative cursor-pointer" title={partner.name}>
+                                        {content}
+                                    </a>
+                                ) : (
+                                    content
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
