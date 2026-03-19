@@ -20,6 +20,7 @@ export function Partners() {
             </div>
 
             <div className="relative flex overflow-x-hidden group">
+                <div className="animate-marquee whitespace-nowrap flex items-center gap-16 px-8">
                     {partners.map((partner) => {
                         const content = (
                             <Image
