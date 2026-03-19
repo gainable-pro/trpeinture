@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const partners = [
-    { name: 'Exceed Digital', logo: '/images/partners/exceed-digital.png', url: 'https://www.exceeddigital.fr/' },
+    { name: 'Exceed Digital', logo: '/images/partners/logo-exceed.png', url: 'https://www.exceeddigital.fr/' },
     { name: 'Tollens', logo: '/images/partners/tollens.png' },
     { name: 'Unikalo', logo: '/images/partners/unikalo.png' },
     { name: 'Seigneurie', logo: '/images/partners/seigneurie.png' },
