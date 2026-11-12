@@ -20,8 +20,8 @@ export function Footer() {
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
-                                <MapPin className="text-primary w-5 h-5 mt-1" />
-                                <span>Eyguières et alentours (30km)<br />13430 Eyguières</span>
+                                <MapPin className="text-primary w-5 h-5 mt-1 shrink-0" />
+                                <span>Rue Calade, 13430 Eyguières<br />Intervention 30km (Salon, Miramas...)</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="text-primary w-5 h-5" />
@@ -71,10 +71,11 @@ export function Footer() {
                             <p className="font-bold text-white mb-1">Garantie Décennale</p>
                             <p className="text-xs text-slate-400">Assurance RC Pro incluse</p>
                         </div>
-                        {/* Placeholder for Google Widget */}
+                        {/* Google Reviews Badge */}
                         <div className="mt-6 flex items-center gap-2">
-                            <div className="text-gold flex">★★★★★</div>
-                            <span className="text-sm font-medium">5.0/5 sur Google</span>
+                            <div className="text-yellow-400 flex text-base">★★★★★</div>
+                            <span className="text-sm font-semibold text-white">5.0/5 sur Google</span>
+                            <span className="text-xs text-slate-400">(30 avis)</span>
                         </div>
                     </div>
                 </div>

@@ -1,31 +1,73 @@
-import { MetadataRoute } from 'next';
-import { cities } from '@/lib/cities';
+import { MetadataRoute } from "next";
+import { cities } from "@/lib/cities";
 
-const BASE_URL = 'https://www.tr-peinture.com'; // Replace with actual domain if different
+const BASE_URL = "https://www.tr-peinture.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const staticRoutes = [
-        '',
-        '/peinture',
-        '/placo-isolation',
-        '/revetements',
-        '/renovation',
-        '/realisations',
-        '/zone-intervention',
-        '/contact',
-        '/mentions-legales',
-    ].map((route) => ({
-        url: `${BASE_URL}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: route === '' ? 1 : 0.8,
-    }));
+    const now = new Date();
 
-    const cityRoutes = cities.map((city) => ({
-        url: `${BASE_URL}/peintre-${city.slug.replace('peintre-', '')}`, // Ensure consistent URL format
-        lastModified: new Date(),
-        changeFrequency: 'monthly' as const,
-        priority: 0.7,
+    const staticRoutes: MetadataRoute.Sitemap = [
+        {
+            url: `${BASE_URL}/`,
+            lastModified: now,
+            changeFrequency: "weekly",
+            priority: 1.0,
+        },
+        {
+            url: `${BASE_URL}/peinture`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/placo-isolation`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/revetements`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/renovation`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/realisations`,
+            lastModified: now,
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
+            url: `${BASE_URL}/zone-intervention`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${BASE_URL}/contact`,
+            lastModified: now,
+            changeFrequency: "monthly",
+            priority: 0.7,
+        },
+        {
+            url: `${BASE_URL}/mentions-legales`,
+            lastModified: now,
+            changeFrequency: "yearly",
+            priority: 0.3,
+        },
+    ];
+
+    const cityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
+        url: `${BASE_URL}/${city.slug}`,
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.85,
     }));
 
     return [...staticRoutes, ...cityRoutes];
