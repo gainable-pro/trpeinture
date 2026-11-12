@@ -37,6 +37,10 @@ export default function Home() {
     "telephone": "+33635238107",
     "email": "contact@tr-peinture.com",
     "priceRange": "€€",
+    "hasMap": "https://share.google/RcDbGqPUaQXWWsvLt",
+    "sameAs": [
+      "https://share.google/RcDbGqPUaQXWWsvLt"
+    ],
     "description": "Artisan peintre en bâtiment et rénovation intérieure/extérieure à Eyguières, Salon-de-Provence et dans les Bouches-du-Rhône. Peinture, placo, isolation et pose de sols.",
     "address": {
       "@type": "PostalAddress",

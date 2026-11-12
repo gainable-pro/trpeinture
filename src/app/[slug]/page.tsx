@@ -73,8 +73,13 @@ export default async function CityPage(props: { params: Promise<{ slug: string }
             "telephone": "+33635238107",
             "email": "contact@tr-peinture.com",
             "priceRange": "€€",
+            "hasMap": "https://share.google/RcDbGqPUaQXWWsvLt",
+            "sameAs": [
+                "https://share.google/RcDbGqPUaQXWWsvLt"
+            ],
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "Rue Calade",
                 "addressLocality": "Eyguières",
                 "postalCode": "13430",
                 "addressCountry": "FR"
@@ -197,6 +202,16 @@ export default async function CityPage(props: { params: Promise<{ slug: string }
 
                         {/* Reassurance points */}
                         <div className="flex flex-wrap items-center gap-6 text-sm text-slate-300 font-medium">
+                            <a
+                                href="https://share.google/RcDbGqPUaQXWWsvLt"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                            >
+                                <div className="text-yellow-400 flex text-xs">★★★★★</div>
+                                <span className="font-semibold text-white">5.0/5 sur Google</span>
+                                <span className="text-xs text-slate-400">(30 avis)</span>
+                            </a>
                             <div className="flex items-center gap-2">
                                 <Clock size={16} className="text-secondary" />
                                 <span>Déplacement gratuit</span>

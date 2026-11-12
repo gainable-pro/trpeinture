@@ -72,11 +72,16 @@ export function Footer() {
                             <p className="text-xs text-slate-400">Assurance RC Pro incluse</p>
                         </div>
                         {/* Google Reviews Badge */}
-                        <div className="mt-6 flex items-center gap-2">
+                        <a
+                            href="https://share.google/RcDbGqPUaQXWWsvLt"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-6 flex items-center gap-2 group hover:opacity-90 transition-opacity"
+                        >
                             <div className="text-yellow-400 flex text-base">★★★★★</div>
-                            <span className="text-sm font-semibold text-white">5.0/5 sur Google</span>
+                            <span className="text-sm font-semibold text-white group-hover:underline">5.0/5 sur Google</span>
                             <span className="text-xs text-slate-400">(30 avis)</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
